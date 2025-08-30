@@ -13,7 +13,9 @@
     "fresh": "pnpm clean && pnpm install",
     "reset": "pnpm clean && pnpm install && pnpm seed",
     "eval": "node scripts/eval.js",
-    "check:day2": "pnpm --filter @mbspro/api test && pnpm eval"
+    "check:day2": "pnpm --filter @mbspro/api test && pnpm eval",
+    "ingest:mbs": "cd apps/api && pnpm exec ts-node ../../scripts/ingest-direct.ts",
+    "ingest:mbs:api": "node scripts/ingest-mbs-data.js"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
